@@ -23,7 +23,7 @@ def solution(s):
             elif char in [']', ')', '}']: # 닫는 괄호
                 if stack: # 스택이 비어있지 않으면
                     top = stack.pop() # 스택의 가장 위
-                    if bracket_pairs[top] != char :
+                    if string_pairs[top] != char :
                         stack = None
                         break
                 else:
