@@ -9,7 +9,7 @@ def solution(s):
     num = len(s) # 문자열 길이
     
     # 괄호 짝을 딕셔너리로 정의!
-    bracket_pairs = {'[': ']', '(': ')', '{': '}'}
+    string_pairs = {'[': ']', '(': ')', '{': '}'}
 
     # 문자열을 num번 회전시키는 반복문 시작!
     for i in range(num):
