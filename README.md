@@ -1,4 +1,4 @@
-# CodingTest!
+# CodingTest. :)
 
 ## 자주 쓰이는 코테 포맷
 - 소요 시간 : 
