@@ -19,8 +19,11 @@ visited = []
 # 3. DFS 함수 정의
 def dfs(start):
     stack.append(start)
+    visited.append(start)
     while stack:
-        
+        node = stack.pop()
+        if node not in visited:
+
 
 
 # 4. DFS 테스트 코드
