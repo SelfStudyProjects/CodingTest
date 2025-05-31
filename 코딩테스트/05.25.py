@@ -18,10 +18,14 @@ stack = []
 
 # 3. DFS 함수 정의
 def dfs(start):
-    # 3-1. 스택을 이용해 구현 (재귀로도 가능)
-    # 3-2. 시작 노드를 스택에 추가
+    # 시작 노드를 스택 및 방문 리스트에 추가
     stack.append(start)
+    visited.append(start)
     
+    start = min(graph[start])
 
-# 4. DFS 실행
+    dfs(start)
+
+
+# 4. DFS 실행(테스트코드)
 dfs(1)
