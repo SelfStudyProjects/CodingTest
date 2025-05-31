@@ -10,13 +10,20 @@ graph = {
     8: [1, 7]
 }
 
-visited = []
+def dfs(node, visited=None):
+    if visited is None:
+        visited = []
+        is_first_call = True
+    else:
+        is_first_call = False
 
-def dfs(node):
     visited.append(node)
     for adj in sorted(graph[node], reverse=False):  # 오름차순 정렬
         if adj not in visited:
-            dfs(adj)
+            dfs(adj, visited)
+    if is_first_call:
+        print(visited)
 
-dfs(1)
-print(visited)  # [1, 2, 7, 6, 8, 3, 4, 5]
+# 사용 예시
+dfs(1)  # [1, 2, 7, 6, 8, 3, 4, 5]
+dfs(2)  # [2, 1, 3, 4, 5, 8, 7, 6]
