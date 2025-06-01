@@ -1,0 +1,23 @@
+N, K = map(int, input().split())
+map_ = []
+virus = []
+for i in range(N):
+    line = list(map(int, input().split()))
+    map_.append(line)
+    for j, num in enumerate(line):
+        if num != 0:
+            virus.append((i+1, j+1, num))
+
+S, X, Y = map(int, input().split())
+
+virus_num = 0
+min_distance = 1000
+for v in virus:
+    distance = abs(X - v[0]) + abs(Y - v[1])
+    if distance <= S:
+        if distance < min_distance:
+            min_distance = distance
+            virus_num = v[2]
+        elif distance == min_distance:
+            virus_num = min(virus_num, v[2])
+print(virus_num)
