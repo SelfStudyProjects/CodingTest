@@ -1,3 +1,6 @@
+// python과의 차이 명심
+// &&, ===, if문 차이
+
 function solution(angle) {
     var answer = 0;
     if (angle > 0 && angle < 90) {
