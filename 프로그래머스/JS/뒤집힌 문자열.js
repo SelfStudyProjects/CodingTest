@@ -24,3 +24,13 @@
  *   배열의 요소 값을 직접 얻을 수 있어 코드가 더 명확해짐.
  *
  */
+
+function solution(my_string) {
+    const origin_string = my_string.split('')
+    const reversed_string = []
+    for (letter in origin_string){
+        reversed_string.unshift(origin_string[letter])
+    }
+    const result = reversed_string.join('')
+    return result;
+}
