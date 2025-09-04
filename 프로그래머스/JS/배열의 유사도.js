@@ -1,3 +1,5 @@
+// 내 풀이 //
+
 function solution(s1, s2) {
     var answer = 0;
     for(i = 0; i < s1.length; i++) {
