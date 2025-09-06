@@ -1,3 +1,5 @@
+// 가위바위보 파일 생성
+
 function solution(rsp) {
     var answer = '';
     for(let i = 0; i < rsp.length; i++){
