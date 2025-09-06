@@ -1,5 +1,4 @@
 function solution(numbers, direction) {
-    // 💡 참고: JavaScript에서 배열 복사본을 만들어두는 것이 좋은 습관일 때가 있어.
     // 여기서는 원본 배열을 변경해도 문제 없으므로 그대로 진행!
 
     if (direction === "right") {
