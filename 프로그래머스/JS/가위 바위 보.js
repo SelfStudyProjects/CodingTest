@@ -1,5 +1,6 @@
 // 가위바위보 파일 생성
 
+>>>>>>> 7df5946686d25d21ac8f151e491bf58b64837188
 function solution(rsp) {
     var answer = '';
     for(let i = 0; i < rsp.length; i++){
