@@ -47,7 +47,7 @@
 *   **예시**:
     ```python
     my_list = [10, 20, 30]
-    my_list.append(40)      # my_list = [10, 20, 30, 40]
+    my_list.append(40)    # my_list = [10, 20, 30, 40]
     ```
 '''
 
