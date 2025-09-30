@@ -4,6 +4,9 @@
 def solution(age):
     answer = ''
     return answer
+
+chr() ord() 파이썬 용법에서 해당 기능들 알아놓기!
+
 '''
 
 def solution(age):
