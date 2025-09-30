@@ -1,4 +1,6 @@
 '''
+아래 포맷이 기본
+
 def solution(age):
     answer = ''
     return answer
