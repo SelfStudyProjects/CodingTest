@@ -9,7 +9,7 @@ def solution(before, after):
     # 한 줄로도 가능: return 1 if sorted(before) == sorted(after) else 0
 
 '''
-아래 내용도 괜찮음
+아래 내용도 괜찮음 참고해보기
 '''
 
 def solution(before, after):
