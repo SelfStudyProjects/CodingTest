@@ -12,5 +12,5 @@ function solution(my_string) {
             answer += char; // answer에 해당 문자를 추가
         }
     }
-    return answer; // 중복 제거된 문자열 반환
+    return answer;
 }
