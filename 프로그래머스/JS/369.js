@@ -3,7 +3,7 @@ function solution(order) {
     let list_order = String(order);
 
     for (let i = 0; i < list_order.length; i++) { 
-        if (['3', '6', '9'].includes(list_order[i])) { 
+        if (['3', '6', '9'].includes(list_order[i])) { /* includes 파트에 대해서는 특히 조심! */
             answer += 1;
         }
     }
