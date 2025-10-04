@@ -11,3 +11,8 @@ def solution(s):
     unique_chars_list.sort() 
 
     return "".join(unique_chars_list)
+
+    #    정렬된 문자들을 하나의 문자열로 합쳐서 반환!
+    #    만약 unique_chars_list가 비어있으면, ''.join([])는 빈 문자열 ''을 반환하므로 문제의 조건에 맞음.
+    #    정렬된 문자들을 하나의 문자열로 합쳐서 반환!
+    #    만약 unique_chars_list가 비어있으면, ''.join([])는 빈 문자열 ''을 반환하므로 문제의 조건에 맞음.
