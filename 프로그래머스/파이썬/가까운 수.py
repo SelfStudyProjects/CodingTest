@@ -1,5 +1,7 @@
 def solution(array, n):
-    return sorted(array, key=lambda x: abs(x - n))[0]
+    return sorted(array, key=lambda x: (abs(x - n), x))[0]
+
+# 차익을 절댓값 씌운 후, 내림차순 배열. 그리고 가장 큰값을 인덱스 0을 두어서 추출하는 로직
 
 '''
 정렬 기준 지정 (key 매개변수)
