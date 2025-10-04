@@ -1,6 +1,22 @@
 def solution(array, n):
     return sorted(array, key=lambda x: abs(x - n))[0]
 
+'''
+정렬 기준 지정 (key 매개변수)
+key 매개변수에 함수를 지정하면, 해당 함수의 실행 결과를 기준으로 정렬할 수 있습니다. 
+튜플 리스트 정렬: 각 튜플의 두 번째 요소를 기준으로 정렬합니다.
+
+tuples = [(1, 'B'), (3, 'A'), (2, 'C')]
+sorted_by_second = sorted(tuples, key=lambda x: x[1])
+print(sorted_by_second)  # 출력: [(3, 'A'), (1, 'B'), (2, 'C')]
+'''
+
+'''
+add = lambda x, y: x + y
+print(add(5, 3)) # 출력: 8
+'''
+
+# sorted 함수 기준, True 내림차순-False 오름차순
 # [3, 10, 28, 30, 12] => [17, 10, 8, 10, 8]
 # [3, 10, 28, 30, 12] => [(17, 3), (10, 10), (8, 28), (10, 30), (8, 12)]
 # 원하는 숫자: 20
