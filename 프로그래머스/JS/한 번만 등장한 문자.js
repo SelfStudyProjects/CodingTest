@@ -12,6 +12,5 @@ function solution(s) {
         }
     
     uniqueCharsList.sort(); 
-    
     return uniqueCharsList.join(''); 
 }
