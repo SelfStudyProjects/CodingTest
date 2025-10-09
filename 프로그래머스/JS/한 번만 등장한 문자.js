@@ -2,7 +2,6 @@ function solution(s) {
     const charCounts = {}; 
     for (const char of s) {
         charCounts[char] = (charCounts[char] || 0) + 1;
-
     }
 
     const uniqueCharsList = []; 
