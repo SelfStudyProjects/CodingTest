@@ -13,4 +13,4 @@ def solution(emergency):
         rank = sorted_emergency.index(e) + 1  # 인덱스는 0부터 시작하므로 +1
         answer.append(rank)
         
-    return answer
+    return answer 
