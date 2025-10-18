@@ -1,3 +1,5 @@
+// 다시 풀기
+
 function solution(numbers) {
 
     const numMap = {
