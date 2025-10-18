@@ -1,3 +1,5 @@
+# 다시 풀기
+
 # numbers_dictionary를 따로 두면서 키 값에 "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
 ## value 값에 각각 0, 1, 2 ... 9를 두게끔 하는 방향성
 # numbers를 입력하면 위 딕션너리를 기준으로 키 값에 해당되는 게 있는지 확인
