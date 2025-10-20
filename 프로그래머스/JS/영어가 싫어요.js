@@ -7,6 +7,18 @@ numbers	result
 "onefourzerosixseven"	14067
 */
 
+/*
+Object.entries(obj)
+객체 ==> 배열 :
+객체를 배열로 만들어 준다.
+객체의 키와 값을 [key, value]의 배열(딕셔너리)로 반환한다.
+(객체가 배열로 바뀜에 따라 key와 value는 순서성을 가지게 됨)
+
+Object.fromEntries(arr)
+배열(딕셔너리) ==> 객체 :
+2차원으로 구성된 배열의 키 값 쌍 목록을 객체로 바꾼다.
+*/
+
 function solution(numbers) {
 
     const numMap = {
@@ -21,6 +33,8 @@ function solution(numbers) {
         let foundMatch = false;
 
         for (const [word, digit] of Object.entries(numMap)) {
+            // 그 객체 안에 있는 모든 키-값 쌍을 **[키, 값] 형태의 '배열' 요소들로 이루어진 '배열'**로 바꿔줘.
+            // 배열, 문자열, Map, Set 같은 "반복 가능한(iterable)" 자료형으로 for 반복문을 시행할 수 있음
             // 현재 numbers 문자열의 'currentIdx' 위치부터 'word'와 일치하는지 확인
             if (numbers.startsWith(word, currentIdx)) {
                 resultStr += digit;       // 일치하면 해당 숫자를 resultStr에 추가
