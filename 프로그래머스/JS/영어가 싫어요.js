@@ -1,4 +1,11 @@
 // 다시 풀기
+// 생성 예시는 아래 주석들과 같습니다.
+
+/*
+numbers	result
+"onetwothreefourfivesixseveneightnine"	123456789
+"onefourzerosixseven"	14067
+*/
 
 function solution(numbers) {
 
@@ -7,8 +14,8 @@ function solution(numbers) {
         "five": "5", "six": "6", "seven": "7", "eight": "8", "nine": "9"
     };
 
-    let resultStr = "";
-    let currentIdx = 0;
+    let resultStr = ""; // 빈 문자열 생성
+    let currentIdx = 0; // numbers 배열에서 요소의 인덱스를 나타냄
 
     while (currentIdx < numbers.length) {
         let foundMatch = false;
