@@ -35,4 +35,4 @@ function solution(spell, dic) {
 
     // dic의 모든 단어를 확인했지만, 일치하는 단어를 찾지 못했습니다.
     return 2; // 따라서 2를 반환
-}
+} 
