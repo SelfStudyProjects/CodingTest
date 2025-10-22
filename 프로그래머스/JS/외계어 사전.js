@@ -32,4 +32,4 @@ function solution(spell, dic) {
         }
     }
     return 2;
-} 
+}
