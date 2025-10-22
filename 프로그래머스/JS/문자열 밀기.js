@@ -26,7 +26,8 @@ function solution(A, B) {
     if (A === B) {
         return 0;
     }
-    let listA = Array.from(A); 
+    let listA = Array.from(A);
+    let listB = Array.from(B);
     const numShifts = A.length; 
     
     let shiftCount = 0; 
@@ -35,7 +36,7 @@ function solution(A, B) {
         const lastChar = listA.pop(); 
         
         listA.unshift(lastChar); 
-        if (listA.join('') === B) {
+        if (listA === listB) {
             return shiftCount;
         }
     }
