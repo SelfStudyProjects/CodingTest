@@ -12,7 +12,7 @@
 // # 스택에서 가장 최근 숫자 제거 (pop 메서드는 배열의 마지막 요소를 제거하고 반환)
 // # 제거된 숫자를 totalSum에서 댐
 // 문자열 "10"을 숫자 10으로 변환
-// # totalSum에 현재 숫자 더함
+// # totalSum에 현재 숫자 더함 
 // # for 반복문 끝나면 최종값 totalSum 반환 
 
 function solution(s) {
