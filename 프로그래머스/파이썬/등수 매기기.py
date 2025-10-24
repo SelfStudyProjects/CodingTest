@@ -11,7 +11,7 @@
 # .astype(int)로 소수점 제거, .tolist()로 다시 파이썬 리스트로 변환
 
 '''
-Series 객체: Pandas 라이브러리에서 제공하는 1차원 레이블링된 배열 형태로,
+Series 객체: Pandas 라이브러리에서 제공하는 1차원 레이블링된 배열(list) 형태로,
 인덱스(Index)와 값(Values)으로 구성됩니다. 이는 다양한 데이터 타입을 저장할 수 있으며,
 인덱스를 통해 값에 접근하는 기능을 제공하여 표 형태 데이터 처리의 기본 구성 요소로 활용됩니다.
 
@@ -21,8 +21,10 @@ Series 객체: Pandas 라이브러리에서 제공하는 1차원 레이블링된
 .astype(int).tolist()는 Pandas Series 객체의 등수 결과를 문제의 요구사항에 맞게 변환하는 필수 과정입니다.
 이는 rank() 메소드의 float형 Series 반환값을 .astype(int)로 정수화하고, .tolist()를 통해 파이썬 표준 list 형태로 최종 변환하여
 정수형 리스트 결과물을 제공합니다.
-'''
 
+rank() 메소드는 Pandas Series 객체의 내장 기능이므로,
+파이썬 리스트인 avg_scores를 먼저 pd.Series()를 통해 Series 객체로 변환해야만 해당 메소드를 적용할 수 있습니다.
+'''
 
 import numpy as np
 import pandas as pd
