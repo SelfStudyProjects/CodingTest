@@ -24,4 +24,4 @@ def solution(n):
         else:
             count += 1
 
-    return three_x_num
+    return three_x_num 
