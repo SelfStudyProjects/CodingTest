@@ -1,3 +1,9 @@
+# 이것도 자료 구조 중에 뭐 하나 쓰는 걸로 아는데 그게 뭐지?
+# 마치 스택, 큐처럼 되게 중요한 개념이었는데... 그것만 알면 잘 풀리는 문제인걸로 아는데
+# 그리고 그 자료구조 속에서 board에 1이 있으면 상하좌우에서 1로 바꾸기, 이때 if문을 써서 0이면
+# 1로 바꾸는 작업, 근데 여기서 5 X 5 배열 내에 있을 때만 해당 작업들을 시행하되, 그게 아니면
+# 시행이 안되게끔 해야 함
+
 def solution(board):
     n = len(board)  # board의 크기 (N x N)
     
@@ -31,4 +37,4 @@ def solution(board):
             if danger_map[r][c] == 0:  # danger_map에서 0은 안전 지역을 의미
                 safe_area_count += 1
 
-    return safe_area_count 
+    return safe_area_count
