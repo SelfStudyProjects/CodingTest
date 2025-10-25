@@ -12,7 +12,7 @@
 # if문 생성, 만약 'x'와 '양의 정수' 2개 모두 있을 때는 '+'로 이어주기, 그러나
 # 둘 중에 하나만 있으면 '+' 없이 하나만 나타나게끔 하기
 
-def solution(polynomial): 
+def solution(polynomial):
     # polynomial 문자열을 공백(' ') 기준으로 분리하여 항들의 리스트를 얻는다.
     terms = polynomial.split(' ')
 
