@@ -31,4 +31,4 @@ def solution(board):
             if danger_map[r][c] == 0:  # danger_map에서 0은 안전 지역을 의미
                 safe_area_count += 1
 
-    return safe_area_count
+    return safe_area_count 
