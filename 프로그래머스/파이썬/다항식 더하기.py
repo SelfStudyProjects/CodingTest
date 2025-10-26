@@ -20,7 +20,6 @@
 # 상수항 처리
 # 상수항은 문자열로 변환하여 추가
 
-
 def solution(polynomial):
     terms = polynomial.split(' ')
 
