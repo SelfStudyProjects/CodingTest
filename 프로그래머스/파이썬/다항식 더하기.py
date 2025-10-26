@@ -25,17 +25,17 @@
 def solution(polynomial):
     terms = polynomial.split(' ')
 
-    x_coeff_sum = 0
-    const_sum = 0
+    x_coeff_sum = 0 # 최종 x의 계수가 담김
+    const_sum = 0 # 최종 상수항이 담김
 
     for term in terms:
         if term == '+':
             continue
         elif 'x' in term:
-            if term == 'x':
+            if term == 'x': # 계수가 1일 때를 염두
                 x_coeff_sum += 1
-            else:
-                x_coeff_sum += int(term[:-1]) 
+            else: # 계수가 1이 아닐 때를 염두
+                x_coeff_sum += int(term[:-1])
         else:
             const_sum += int(term)
 
