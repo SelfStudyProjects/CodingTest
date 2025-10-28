@@ -6,4 +6,4 @@ def count_eights():
         answer += str(number).count('8')
     return answer
 
-print(count_eights())
+print(count_eights()) 
