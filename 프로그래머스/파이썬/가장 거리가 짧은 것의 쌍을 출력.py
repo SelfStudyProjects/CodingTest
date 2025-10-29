@@ -1,6 +1,14 @@
 # 가장 거리가 짧은 것의 쌍을 출력
 # 다시
 
+'''
+첫번째 예시에서
+# if diff not in diff_map: 이 부분이 없다고 가정하면:
+# 바로 'diff_map[diff].append(pair)'부분에서 에러가 발생!
+# diff_map에 '2'라는 키가 없는데 diff_map['2']를 호출해서 리스트를 찾으려 했기 때문
+
+'''
+
 def closest_pair_all_pairs(S):
     diff_map = {}
     n = len(S)
@@ -10,7 +18,7 @@ def closest_pair_all_pairs(S):
             diff = abs(S[i] - S[j])
             if diff not in diff_map:
                 diff_map[diff] = []
-            diff_map[diff].append((S[i], S[j]))
+            diff_map[diff].append((S[i], S[j])) # 거기에 맞게 튜플 추가, 튜플은 딕셔너리의 값에 해당
     
     min_diff = sorted(diff_map.keys())[0]  # 최소 차이값
     return diff_map[min_diff][0]            # 최소 차이 쌍 중 첫번째 쌍 반환
