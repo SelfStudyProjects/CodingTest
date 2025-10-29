@@ -16,4 +16,36 @@ for i in n - 1 :
 그리고 그 '키'들을 따로 배열로 append 메소드 이용해서 추가하고, 해당 배열
 기준으로 오름차순 정렬 sorted(reversed = False)하기, 그리고 인덱스 0에 해당되는
 값을 도출해서 이거를 생성한 딕션너리 기준으로 값을 도출해서 return하기, 다만
-'''ㅇ
+'''
+
+def closest_pair_all_pairs(S):
+    diff_map = {}
+    n = len(S)
+    
+    for i in range(n-1):
+        for j in range(i+1, n):
+            diff = abs(S[i] - S[j])
+            if diff not in diff_map:
+                diff_map[diff] = []
+            diff_map[diff].append((S[i], S[j]))
+    
+    min_diff = sorted(diff_map.keys())[0]  # 최소 차이값
+    return diff_map[min_diff][0]            # 최소 차이 쌍 중 첫번째 쌍 반환
+
+# 위의 것이 내가 적은 코드 전문, 아래는 훨씬 직관적이고 간단한 코드 전문
+
+def closest_pair_adjacent(S):
+    min_diff = float('inf')
+    min_pair = None
+    
+    for i in range(len(S) - 1):
+        diff = abs(S[i] - S[i+1])
+        if diff < min_diff:
+            min_diff = diff
+            min_pair = (S[i], S[i+1])
+
+    return min_pair
+
+# 예시
+S = [1, 3, 4, 8, 13, 17, 20]
+print(closest_pair_all_pairs(S))  # 출력: (3, 4)
