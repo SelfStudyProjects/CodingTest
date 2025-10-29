@@ -20,14 +20,14 @@ def closest_pair_all_pairs(S):
 
 def closest_pair_adjacent(S):
     min_diff = float('inf')
-    # 가장 작은 거리를 찾을 건데 처음엔 어떤 숫자보다도 무한대로 큰 값을 넣어서 초기화하는 거야.
+    # 가장 작은 거리를 찾을 건데 처음엔 어떤 숫자보다도 무한대로 큰 값을 넣어서 초기화, 양의 무한대
     min_pair = None
     
     for i in range(len(S) - 1):
         diff = abs(S[i] - S[i+1])
         if diff < min_diff:
             min_diff = diff
-            min_pair = (S[i], S[i+1])
+            min_pair = (S[i], S[i+1]) # '()'은 튜플
 
     return min_pair
 
