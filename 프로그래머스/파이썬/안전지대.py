@@ -1,11 +1,8 @@
-# 다ㅅ ㄱㄱ
-
 # board의 크기 (N x N)
 # 지뢰가 없는 깨끗한 지도(danger_map)를 생성하여 위험 지역을 표시할 것이다.
 # 초기에는 모든 칸이 안전(0)하다고 가정
 # 주변 8칸 (대각선 포함)과 자기 자신을 표시하기 위한 방향 벡터
 # (dr, dc) = (delta row, delta column)
-#               상       하       좌       우    좌상단   우상단   좌하단   우하단
 # (0, 0)은 지뢰 자신을 표시하기 위함
 # 원본 board를 순회하며 지뢰(1)를 찾는다.
 # 지뢰를 발견했다면
@@ -20,11 +17,11 @@
 def solution(board):
     n = len(board)    
     danger_map = [[0] * n for _ in range(n)]
-
+#                   상        하       좌      우      좌상단     우상단    좌하단   우하단
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (-1, 1), (1, -1), (1, 1), (0, 0)]
 
-    for r in range(n):
-        for c in range(n):
+    for r in range(n): # r은 0부터 시작해서 n-1까지 진행
+        for c in range(n): # c은 0부터 시작해서 n-1까지 진행
             if board[r][c] == 1: 
                 for dr, dc in directions:
                     nr, nc = r + dr, c + dc 
