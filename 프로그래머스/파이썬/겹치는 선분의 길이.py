@@ -1,4 +1,4 @@
- # 1. 카운팅 배열 초기화:
+# 1. 카운팅 배열 초기화:
 # 좌표 범위 -100 ~ 100에 대해, 1단위 구간을 셀 배열을 만든다.
 # -100을 인덱스 0으로 매핑하기 위해 모든 좌표에 +100을 오프셋으로 사용.
 # arr[i]는 (i-100)부터 (i-100+1)까지의 구간이 겹치는 선분 개수를 저장.
@@ -18,7 +18,8 @@
 def solution(lines):
     arr = [0] * 200
     for line_start, line_end in lines:
-        for i in range(line_start + 100, line_end + 100):
+        for i in range(line_start + 100, line_end + 100): # 인덱스 값을 0부터 시작할려고 이렇게 함, 튜플에다가 +100하면 해당 튜플 속 요소들에 모두 
+        # 100씩 더해짐
             arr[i] += 1
     total_overlap_length = 0
     for count in arr:
