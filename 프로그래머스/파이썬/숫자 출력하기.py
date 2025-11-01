@@ -1,4 +1,21 @@
-# 코드 내 숫자가 없어야 한다, 이 말은 즉슨
-# '문자열' 및 '숫자 변형 함수'(int()) 활용
-# 아스키코드를 쓰자. 그리고 이거를 숫자로 변형시키는
-# 형태로 가보자.
+# 20150111을 출력하는 함수
+def print_magic_number():
+    # 1. 아스키 코드를 이용해 필요한 숫자(0, 1, 2, 5)를 문자열로 생성
+
+    # '0' 만들기: ord('a') - ord('a') 결과는 숫자 0. 이를 str()로 문자열 '0'으로 변환.
+    zero = str(ord('a') - ord('a')) 
+    # '1' 만들기: ord('b') - ord('a') 결과는 숫자 1. 이를 str()로 문자열 '1'으로 변환.
+    one = str(ord('b') - ord('a'))
+    # '2' 만들기: ord('c') - ord('a') 결과는 숫자 2. 이를 str()로 문자열 '2'로 변환.
+    two = str(ord('c') - ord('a'))
+    # '5' 만들기: ord('f') - ord('a') 결과는 숫자 5. 이를 str()로 문자열 '5'로 변환.
+    five = str(ord('f') - ord('a'))
+
+    # 2. 생성된 숫자 문자열들을 순서대로 이어 붙여 최종 문자열 생성
+    result_string = two + zero + one + five + zero + one + one + one
+    
+    # 3. 최종 문자열 출력
+    print(result_string)
+
+# 함수 호출
+print_magic_number()
