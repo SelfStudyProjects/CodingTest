@@ -19,7 +19,7 @@ def print_magic_number():
     result_string = two + zero + one + five + zero + one + one + one
     
     # 3. 최종 문자열 출력
-    print(result_string)
+    print(int(result_string))
 
 # 함수 호출
 print_magic_number()
