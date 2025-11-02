@@ -1,3 +1,5 @@
+# 다시 풀기
+
 # 1. 결과를 저장할 빈 리스트를 준비합니다.
 #    문자열은 불변(immutable)이라, '+' 연산으로 문자열을 계속 합치면 비효율적일 수 있습니다.
 #    리스트에 조각들을 저장 후 마지막에 join()으로 합치는 것이 더 효율적입니다.
@@ -17,6 +19,8 @@
 #    ['a', '3', 'b', '2', 'c', '6', 'a', '1'] -> "a3b2c6a1"
 
 '''
+[문제]
+
 문자열을 입력받아서, 같은 문자가 연속적으로 반복되는 경우에 그 반복 횟수를 표시하여 문자열을 압축하기.
 입력 예시: aaabbcccccca
 출력 예시: a3b2c6a1
@@ -33,24 +37,24 @@ def solution(s):
     for i in range(1, len(s)):
         current_char = s[i] # 현재 순회 중인 문자
 
-        if current_char == previous_char:
+        if current_char == previous_char: # 이전 문자와 같다면
             count += 1
-        else:
+        else: # 이전 문자와 다르다면
             compressed_parts.append(previous_char)
             compressed_parts.append(str(count)) # count는 숫자이므로 문자열로 변환하여 추가
 
-            previous_char = current_char
-            count = 1
+            previous_char = current_char # 이전 문자를 현재 문자로 갱신
+            count = 1 # 새로운 문자이므로 count를 1로 초기화
     
-    compressed_parts.append(previous_char)
+    compressed_parts.append(previous_char) # 마지막 문자 처리
     compressed_parts.append(str(count))
 
-    return "".join(compressed_parts)
+    return "".join(compressed_parts) # 배열의 요소들을 하나의 문자열로 합쳐서 반환
 
 # 입출력 예시 확인
 print(solution("aaabbcccccca"))  # 출력: a3b2c6a1
 print(solution("aabb"))        # 출력: a2b2
 print(solution("abc"))         # 출력: a1b1c1
 print(solution("aaaaa"))        # 출력: a5
-print(solution(""))            # 출력: (빈 문자열)
+print(solution(""))            # 출력: ""
 print(solution("a"))           # 출력: a1
