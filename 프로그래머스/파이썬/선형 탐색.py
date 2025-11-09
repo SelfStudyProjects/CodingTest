@@ -7,7 +7,7 @@ def linear_search(arr, target):
 print(linear_search([5, 3, 2, 8], 2))  # 2
 
 '''
-1) 선형 탐색 (Linear Search)
+1) 선형 탐색 (Linear Search) 
 문제 설명
 정수로 이루어진 배열 arr과 정수 target이 주어질 때, arr에서 target이 처음 등장하는 인덱스를 반환하세요. 만약 배열에 target이 없다면 -1을 반환하세요.
 
