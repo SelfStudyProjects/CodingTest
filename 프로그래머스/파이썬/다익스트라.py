@@ -85,6 +85,7 @@ cur_dist, cur_node = heapq.heappop(queue)
 what: 현재 후보 중 가장 작은 거리의 항목을 꺼냄.
 why: 다익스트라는 최소 거리 노드를 확정적으로 처리하는 그리디 알고리즘.
 how: heappop으로 (distance, node) 튜플 추출.
+참고: heappop -> heapq 모듈에서 가장 작은(최소) 원소를 힙에서 꺼내고 삭제하며, 힙의 성질을 유지하도록 재정렬하는 함수
 
 if cur_dist > distances[cur_node]:
 
