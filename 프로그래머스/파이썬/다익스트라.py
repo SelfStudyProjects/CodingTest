@@ -11,7 +11,7 @@ def dijkstra(graph, start):
             continue
 
         for neighbor, weight in graph[cur_node]:
-            distance = cur_dist + weight
+            distance = cur_dist + weight 
             if distance < distances[neighbor]:
                 distances[neighbor] = distance
                 heapq.heappush(queue, (distance, neighbor))
@@ -27,12 +27,14 @@ print(dijkstra(graph, 'A'))  # {'A': 0, 'B': 2, 'C': 3}
 
 '''
 문제 설명
-가중치(비음수)를 가진 방향 그래프(또는 무방향 그래프)와 시작 정점 start가 주어질 때, start로부터 각 정점까지의 최단 거리를 구해 딕셔너리 형태로 반환하세요. (만약 어떤 정점에 도달 불가능하면 거리는 무한으로 남김)
+가중치(비음수)를 가진 방향 그래프(또는 무방향 그래프)와 시작 정점 start가 주어질 때, start로부터 각 정점까지의 최단 거리를 구해
+딕셔너리 형태로 반환하세요. (만약 어떤 정점에 도달 불가능하면 거리는 무한으로 남김)
 
 제한사항(예시)
 
 모든 간선의 가중치는 0 이상(음수 가중치가 있으면 다익스트라 사용 불가)
 그래프는 인접 리스트 형태로 제공: graph[node] = [(neighbor, weight), ...]
+
 입출력 예
 
 graph = {'A': [('B', 2), ('C', 5)], 'B': [('C', 1)], 'C': []}, start='A' → {'A':0, 'B':2, 'C':3}
