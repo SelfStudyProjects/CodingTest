@@ -80,7 +80,6 @@ what: 힙이 빌 때까지 반복.
 why: 아직 처리할 후보 노드가 남아 있기 때문에 계속 탐색.
 how: 파이썬의 while 반복문.
 
-여기까지 이해함
 cur_dist, cur_node = heapq.heappop(queue)
 
 what: 현재 후보 중 가장 작은 거리의 항목을 꺼냄.
