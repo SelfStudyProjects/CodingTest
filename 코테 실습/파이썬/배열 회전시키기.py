@@ -59,3 +59,4 @@ def solution(numbers, direction):
         num = numbers.pop(0)
         numbers.append(num)
     return numbers
+    
