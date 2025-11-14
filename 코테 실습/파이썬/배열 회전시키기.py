@@ -58,4 +58,4 @@ def solution(numbers, direction):
     else:
         num = numbers.pop(0)
         numbers.append(num)
-    return numbers 
+    return numbers
