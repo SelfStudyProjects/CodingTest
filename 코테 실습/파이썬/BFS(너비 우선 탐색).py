@@ -1,4 +1,7 @@
 '''
+이것도 다시 보기, DFS는 솔직히 보면 이제는 풀 수 있을 것 같은데
+BFS는 코드 이해랑 설명은 되는데 아직은 풀 수는 없을 듯한 느낌쓰
+
 * 문제 설명
 인접 리스트로 표현된 그래프와 시작 정점 start가 주어질 때, 너비 우선 탐색(BFS)을 사용하여
 시작점으로부터의 방문 순서를 출력하거나 리스트 형태로 반환하세요. 방문한 정점은 다시 방문하지 않도록 처리해야 합니다.
@@ -16,8 +19,8 @@ BFS는 큐(선입선출)를 사용해 먼저 들어간(탐색 후보로 등록�
 # from collections import deque
 
 def bfs(graph, start):
-    visited = set()
-    order = []             # 방문 순서를 저장할 리스트
+    visited = set() # 집합 기호 설정
+    order = [] # 방문 순서를 저장할 리스트
     queue = [start] # 위 deque 라이브러리를 쓰면 queue = deque([start])로
     visited.add(start)
 
