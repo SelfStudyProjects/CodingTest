@@ -22,7 +22,7 @@ def bfs(graph, start):
     visited.add(start)
 
     while queue:
-        node = queue.popleft()
+        node = queue.pop(0) # 위 라이브러리 쓰면 node = queue.popleft()
         order.append(node)
         for neighbor in graph.get(node, []):
             if neighbor not in visited:
