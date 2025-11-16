@@ -1,3 +1,7 @@
+'''
+안봐도 됨
+'''
+
 def count_eights():
     answer = 0
     for number in range(1, 10001):
