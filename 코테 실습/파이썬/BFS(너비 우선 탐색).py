@@ -13,12 +13,12 @@ BFS는 큐(선입선출)를 사용해 먼저 들어간(탐색 후보로 등록�
 시간복잡도: O(V + E) — 각 정점과 간선은 한 번씩만 처리됨(인접 리스트 기준). V는 정점 수, E는 간선 수.
 공간복잡도: O(V) — visited 집합과 큐에 최대 V개 항목이 들어갈 수 있음.
 '''
-from collections import deque
+# from collections import deque
 
 def bfs(graph, start):
     visited = set()
     order = []             # 방문 순서를 저장할 리스트
-    queue = deque([start])
+    queue = [start] # 위 deque 라이브러리를 쓰면 queue = deque([start])로
     visited.add(start)
 
     while queue:
