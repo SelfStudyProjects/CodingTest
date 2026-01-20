@@ -1,4 +1,6 @@
 /*
+다시 ㄱㄱ
+
 설명: 정수 n(0 이상)이 주어질 때, n번째 피보나치 수 fib(n)을 재귀 + 메모이제이션으로 계산하는 함수를 작성하세요.
 
 피보나치 정의: fib(0) = 0, fib(1) = 1, fib(n) = fib(n-1) + fib(n-2) (n ≥ 2)
@@ -21,12 +23,34 @@ memo(캐시)는 함수 내부 해시맵(object 또는 Map) 형태로 사용
 // 따라서 아래 템플릿처럼 memo === undefined 체크 방식 권장.
 
 function fibMemo(n, memo) {
-  if (memo === undefined) memo = {}; // 안전한 초기화
+  if (typeof n !== 'number' || n < 0 || !Number.isInteger(n)) {
+    throw new Error('n은 0 이상의 정수여야 합니다.');
+  }
 
-  // TODO: 재귀 + memo 로직 구현
+  // 안전한 초기화: 기본 매개변수로 {}를 바로 쓰면 공유 이슈가 있으므로 내부에서 처리
+  if (memo === undefined) memo = {};
+
+  // 캐시 검사: 이미 계산해둔 값이 있으면 즉시 반환
+  if (memo.hasOwnProperty(n)) return memo[n];
+
+  // 기저 조건: n이 0 또는 1이면 그 값을 반환
+  if (n <= 1) {
+    memo[n] = n;
+    return n;
+  }
+
+  // 재귀로 하위 문제 계산 (memo를 계속 전달)
+  const val = fibMemo(n - 1, memo) + fibMemo(n - 2, memo);
+
+  // 계산 결과를 캐시에 저장하고 반환
+  memo[n] = val;
+  return val;
 }
 
-// (선택) 큰 n을 안전하게 처리하는 바텀업(반복) 버전 템플릿
-function fibBottomUp(n) {
-  // TODO: 반복으로 fib 계산 (재귀 깊이 제한 회피용)
-}
+/*
+console.log(fibMemo(0));   // 0
+console.log(fibMemo(1));   // 1
+console.log(fibMemo(2));   // 1
+console.log(fibMemo(10));  // 55
+console.log(fibBottomUp(10)); // 55
+*/
