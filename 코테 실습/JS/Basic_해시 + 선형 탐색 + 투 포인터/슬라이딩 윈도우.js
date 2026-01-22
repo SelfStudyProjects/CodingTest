@@ -18,7 +18,25 @@ Part B: arr = [1,2,1,0,1,1,0], S = 3 → 정답 length = 5 (예: [1,0,1,1,0], �
 
 // Part A: two-sum using Map
 function twoSumIndices(arr, target) {
-  // TODO: implement using Map (hash)
+  // Map to store value -> index mapping
+  const map = new Map();
+  
+  // Iterate through array
+  for (let i = 0; i < arr.length; i++) {
+    const complement = target - arr[i];
+    
+    // Check if complement exists in map
+    if (map.has(complement)) {
+      // Found pair: return indices in order
+      return [map.get(complement), i];
+    }
+    
+    // Store current value and its index
+    map.set(arr[i], i);
+  }
+  
+  // No solution found
+  return [-1, -1];
 }
 
 // Part B: longest subarray with sum <= S (non-negative numbers)
