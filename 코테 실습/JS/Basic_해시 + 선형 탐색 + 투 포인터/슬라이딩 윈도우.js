@@ -41,5 +41,23 @@ function twoSumIndices(arr, target) {
 
 // Part B: longest subarray with sum <= S (non-negative numbers)
 function longestSubarrayAtMostS(arr, S) {
-  // TODO: implement sliding window / two pointers
+  let left = 0;
+  let currentSum = 0;
+  let maxLength = 0;
+
+  for (let right = 0; right < arr.length; right++) {
+    // Expand window by adding right element
+    currentSum += arr[right];
+
+    // Shrink window from left while sum exceeds S
+    while (currentSum > S && left <= right) {
+      currentSum -= arr[left];
+      left++;
+    }
+
+    // Update max length after ensuring sum <= S
+    maxLength = Math.max(maxLength, right - left + 1);
+  }
+
+  return maxLength;
 }
