@@ -41,6 +41,26 @@ function twoSumIndices(arr, target) {
 
 // Part B: longest subarray with sum <= S (non-negative numbers)
 function longestSubarrayAtMostS(arr, S) {
+<<<<<<< HEAD
+  let left = 0;
+  let sum = 0;
+  let maxLen = 0;
+
+  for (let right = 0; right < arr.length; right++) {
+    sum += arr[right];
+
+    // sum이 S 초과이면 left를 옮겨 합을 줄인다
+    while (sum > S && left <= right) {
+      sum -= arr[left];
+      left++;
+    }
+
+    // 현재 윈도우 길이 갱신
+    maxLen = Math.max(maxLen, right - left + 1);
+  }
+
+  return maxLen;
+=======
   let left = 0;
   let currentSum = 0;
   let maxLength = 0;
@@ -59,4 +79,5 @@ function longestSubarrayAtMostS(arr, S) {
   }
   
   return maxLength;
+>>>>>>> 7418ad3ff0ffa687879a5cd990a5d89a52f6f3e0
 }
