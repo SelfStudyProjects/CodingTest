@@ -18,10 +18,45 @@ Part B: arr = [1,2,1,0,1,1,0], S = 3 → 정답 length = 5 (예: [1,0,1,1,0], �
 
 // Part A: two-sum using Map
 function twoSumIndices(arr, target) {
-  // TODO: implement using Map (hash)
+  // Map to store value -> index mapping
+  const map = new Map();
+  
+  for (let i = 0; i < arr.length; i++) {
+    const complement = target - arr[i];
+    
+    // Check if complement exists in map
+    if (map.has(complement)) {
+      // Return [earlier index, current index]
+      return [map.get(complement), i];
+    }
+    
+    // Store current value and its index
+    map.set(arr[i], i);
+  }
+  
+  // No solution found
+  return [-1, -1];
 }
 
 // Part B: longest subarray with sum <= S (non-negative numbers)
 function longestSubarrayAtMostS(arr, S) {
-  // TODO: implement sliding window / two pointers
+  let left = 0;
+  let currentSum = 0;
+  let maxLength = 0;
+  
+  // Expand window with right pointer
+  for (let right = 0; right < arr.length; right++) {
+    currentSum += arr[right];
+    
+    // Shrink window from left while sum > S
+    while (currentSum > S && left <= right) {
+      currentSum -= arr[left];
+      left++;
+    }
+    
+    // Update max length if current window is valid
+    maxLength = Math.max(maxLength, right - left + 1);
+  }
+  
+  return maxLength;
 }
